@@ -2,12 +2,12 @@ import pandas as pd
 import numpy as np
 
 # Parâmetros
-start_filter = pd.to_datetime('2021-01-01')
-end_filter = pd.to_datetime('2025-12-31')
+start_filter = pd.to_datetime('2025-06-09')
+end_filter = pd.to_datetime('2025-06-17')
 margem_erro_percentual = 30  # Exemplo: 30% de margem de erro
 
 # Leitura e alguns tratamentos dos dados
-df = pd.read_csv('data/Request_2025_06_16.csv')
+df = pd.read_csv('data/WF_failures_2025_06_17.csv')
 df['completedDate'] = pd.to_datetime(df['completedDate'], errors='coerce')
 df['status'] = df['status'].str.strip().str.upper()
 
