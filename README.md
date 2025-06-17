@@ -4,3 +4,5 @@ This project is about the extraction of error reports from raw log files and gen
 ## Dashboard de Falhas
 
 ![Dashboard](generate_images/dashboard.png)
+
+![Dashboard](generate_images/dashboard_line.png)

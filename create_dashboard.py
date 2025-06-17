@@ -42,11 +42,27 @@ ax.legend()
 plt.tight_layout()
 
 #Verifica se a pasta de imagens existe, se não, cria uma.
-output_dir = 'generate_images'
+output_dir = 'generated_images'
 os.makedirs(output_dir, exist_ok= True)
 
 #Salva o dashboard gerado na pasta.
 output_path = os.path.join(output_dir, 'dashboard.png')
+
 plt.savefig(output_path)
 
-print(f"Imagem salva em: {output_path}")
+fig, ax = plt.subplots()
+
+ax.plot(labels, sem_margem, marker='o', linestyle='-', color='blue', label='Without Margin')
+ax.plot(labels, com_margem, marker='o', linestyle='--', color='orange', label='With Error Margin (30%)')
+
+ax.set_xlabel('Period')
+ax.set_ylabel('Mean of Failure')
+ax.set_title('Failure Trend (Line Chart)')
+ax.legend()
+
+plt.tight_layout()
+output_path_onda = os.path.join(output_dir, 'dashboard_line.png')
+plt.savefig(output_path_onda)
+plt.close()
+
+print(f"Saved images: {output_path}")
