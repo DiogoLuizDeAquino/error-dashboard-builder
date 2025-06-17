@@ -9,4 +9,5 @@ This project is about the extraction of error reports from raw log files and gen
 ### Line Chart
 ![Line Chart](generated_images/dashboard_line.png)
 
+### Pizza Chart
 ![Pizza Chart](generated_images/dashboard_pizza.png)
