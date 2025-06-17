@@ -38,9 +38,9 @@ mean_monthly_real = (total_failures / total_months)
 # Aplicando margem de erro (reduzindo o total de falhas antes das médias)
 failures_ajustadas = total_failures * (1 - margem_erro_percentual / 100)
 
-mean_daily_corrigida = (failures_ajustadas / total_days) if total_days > 0 else 0
-mean_weekly_corrigida = (failures_ajustadas / total_weeks) if total_weeks > 0 else 0
-mean_monthly_corrigida = (failures_ajustadas / total_months) if total_months > 0 else 0
+mean_daily_corrigida = (failures_ajustadas / total_days)
+mean_weekly_corrigida = (failures_ajustadas / total_weeks)
+mean_monthly_corrigida = (failures_ajustadas / total_months)
 
 # Impressão dos resultados
 print(f"Período analisado: {start_date.date()} até {end_date.date()} ({total_days} dias)")
