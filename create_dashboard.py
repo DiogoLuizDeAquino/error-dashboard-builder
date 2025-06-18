@@ -6,7 +6,7 @@ import os
 
 # Parâmetros
 csv_path = 'data/WF_failures_2025_06_17.csv'
-start_filter = pd.to_datetime('2024-06-17')
+start_filter = pd.to_datetime('2025-06-10')
 end_filter = pd.to_datetime('2025-06-17')
 margem_erro_percentual = 30
 
@@ -39,7 +39,7 @@ ax.bar([p + width for p in x], com_margem, width, color="#64E54A", label='With m
 
 ax.set_xlabel('Period')
 ax.set_ylabel('Mean of Failure')
-ax.set_title('Compare the averages - (1 year period)')
+ax.set_title('Compare the averages - (8 days period)')
 ax.set_xticks([p + width / 2 for p in x])
 ax.set_xticklabels(labels)
 ax.legend()
@@ -57,7 +57,7 @@ ax.plot(labels, com_margem, marker='o', linestyle='--', color="#64E54A", label='
 
 ax.set_xlabel('Period')
 ax.set_ylabel('Mean of Failure')
-ax.set_title('Line Chart - (1 year period)')
+ax.set_title('Line Chart - (8 days period)')
 ax.legend()
 
 plt.tight_layout()
@@ -84,7 +84,7 @@ if not top_10_df.empty:
         colors=colors_pizza
     )
 
-    ax.set_title('Top 10 Workflows with Most Failures - (1 year period)')
+    ax.set_title('Top 10 Workflows with Most Failures - (8 days period)')
     ax.axis('equal')  # Deixar a pizza circular
 
     output_path_pizza = os.path.join(output_dir, 'dashboard_pizza.png')
